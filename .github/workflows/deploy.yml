@@ -8,7 +8,8 @@ jobs:
     name: Deploying to Github Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
@@ -22,7 +23,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_AFRISEND_SECRET }}
         run: |
+          pwd
+          ls -al
           git checkout --orphan gh-pages
+          git rm -rf .
           npm run deploy
           git add .
           git commit -m "Deploy to GitHub Pages"
