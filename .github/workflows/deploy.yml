@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: "18"
       - name: Install packages
         run: npm i
       - name: Set Creds
@@ -23,8 +23,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_AFRISEND_SECRET }}
         run: |
-          pwd
-          ls -al
           git checkout --orphan gh-pages
           git rm -rf .
           npm run deploy
