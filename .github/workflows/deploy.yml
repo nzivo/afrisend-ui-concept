@@ -23,6 +23,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_AFRISEND_SECRET }}
         run: |
+          echo $GH_TOKEN
+          git remote get-url origin
           cd /home/runner/work/afrisend-ui-concept/afrisend-ui-concept/
           npm run deploy
           git checkout --orphan gh-pages
