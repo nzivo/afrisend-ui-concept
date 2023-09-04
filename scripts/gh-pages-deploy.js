@@ -9,7 +9,8 @@ import { promises as fs } from "fs";
     await execa("npm", ["run", "build"]);
     // await execa("yarn", ["build"]);
     // Understand if it's dist or build folder
-    const folderName = fs.existsSync("dist") ? "dist" : "build";
+    // changed the method to access
+    const folderName = fs.access("dist") ? "dist" : "build";
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
     console.log("Pushing to gh-pages...");
