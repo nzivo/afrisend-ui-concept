@@ -23,10 +23,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_AFRISEND_SECRET }}
         run: |
-          git checkout --orphan gh-pages
-          git rm -rf .
           cd /home/runner/work/afrisend-ui-concept/afrisend-ui-concept/
           npm run deploy
+          git checkout --orphan gh-pages
+          git rm -rf .
           git add .
           git commit -m "Deploy to GitHub Pages"
           git push origin HEAD:gh-pages --force
