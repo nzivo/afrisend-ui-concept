@@ -10,6 +10,9 @@
     "deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
+    "@formkit/addons": "^1.0.0",
+    "@formkit/themes": "^1.0.0",
+    "@formkit/vue": "^1.0.0",
     "@headlessui/vue": "^1.7.16",
     "@heroicons/vue": "^2.0.18",
     "vue": "^3.3.4"
