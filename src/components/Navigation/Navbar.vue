@@ -5,10 +5,11 @@
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <RouterLink :to="{ name: 'home' }">
           <span class="sr-only">Afrisend Money Transfer</span>
-          <img class="h-8 w-auto" src="/site-assets/afrisend-logo.svg" alt="" />
-        </a>
+          <img class="h-8 w-auto" src="/site-assets/afrisend-logo.svg" alt=""
+        /></RouterLink>
+        <a href="#" class="-m-1.5 p-1.5"> </a>
       </div>
       <div class="flex lg:hidden">
         <button
@@ -102,9 +103,12 @@
         >
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Log in <span aria-hidden="true">&rarr;</span></a
+        <RouterLink
+          :to="{ name: 'login' }"
+          class="text-sm font-semibold leading-6 text-gray-900"
         >
+          Log in <span aria-hidden="true">&rarr;</span>
+        </RouterLink>
       </div>
     </nav>
     <Dialog
@@ -190,7 +194,11 @@
 </template>
 
 <script setup>
+import { RouterLink, useRoute, useRouter } from "vue-router";
 import { ref } from "vue";
+
+const route = useRoute();
+const router = useRouter();
 import {
   Dialog,
   DialogPanel,

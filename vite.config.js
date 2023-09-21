@@ -5,5 +5,5 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   plugins: [vue()],
   // updated the base directory
-  base: "/afrisend-ui-concept/",
+  base: "/",
 });
