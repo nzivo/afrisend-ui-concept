@@ -103,18 +103,36 @@
         >
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <RouterLink
-          :to="{ name: 'registration' }"
-          class="m-1 text-sm font-semibold leading-6 bg-green-700 hover:bg-green-900 text-white py-1 px-4 rounded"
-        >
-          Register
-        </RouterLink>
-        <RouterLink
-          :to="{ name: 'login' }"
-          class="m-1 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200 py-1 px-4 rounded"
-        >
-          Log in <span aria-hidden="true">&rarr;</span>
-        </RouterLink>
+        <div v-if="isAuthenticated">
+          <RouterLink
+            :to="{ name: 'registration' }"
+            class="m-1 text-sm font-semibold leading-6 bg-green-700 hover:bg-green-900 text-white py-1 px-4 rounded"
+          >
+            Register
+          </RouterLink>
+          <RouterLink
+            :to="{ name: 'login' }"
+            class="m-1 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200 py-1 px-4 rounded"
+          >
+            Log in <span aria-hidden="true">&rarr;</span>
+          </RouterLink>
+        </div>
+        <div v-else class="flex items-center">
+          <img
+            src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+            class="rounded-full"
+            style="height: 25px; width: 25px"
+            alt=""
+            loading="lazy"
+          />
+          <button
+            class="m-1 text-sm font-semibold leading-6 bg-green-700 hover:bg-green-900 text-white py-1 px-4 rounded"
+            type="button"
+            @click="logout"
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </nav>
     <Dialog
@@ -274,4 +292,22 @@ const callsToAction = [
 ];
 
 const mobileMenuOpen = ref(false);
+</script>
+
+<script>
+import store from "../../store/index.js";
+
+export default {
+  methods: {
+    login() {
+      store.dispatch("logout");
+    },
+  },
+  computed: {
+    isAuthenticated() {
+      console.log("navbar isauthenticated " + store.getters.isAuthenticated);
+      store.getters.isAuthenticated;
+    },
+  },
+};
 </script>

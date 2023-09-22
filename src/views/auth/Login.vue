@@ -59,6 +59,7 @@
             <button
               class="w-full px-4 py-2 font-bold text-white bg-green-700 rounded hover:bg-green-900 focus:outline-none focus:shadow-outline"
               type="button"
+              @click="login"
             >
               Sign In
             </button>
@@ -91,5 +92,18 @@
 </template>
 
 <script>
-export default {};
+import store from "../../store/index.js";
+
+export default {
+  methods: {
+    login() {
+      store.dispatch("login");
+    },
+  },
+  computed: {
+    isAuthenticated() {
+      store.getters.isAuthenticated;
+    },
+  },
+};
 </script>

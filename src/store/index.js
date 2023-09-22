@@ -10,6 +10,7 @@ const store = new createStore({
   },
   mutations: {
     SET_AUTHENTICATED(state, value) {
+      console.log("Mutation SET_AUTHENTICATED called");
       state.user.authenticated = value;
     },
     // other mutations
