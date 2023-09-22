@@ -1,6 +1,7 @@
 import Login from "../views/auth/Login.vue";
 import Registration from "../views/auth/Registration.vue";
 import ForgotPassword from "../views/auth/ForgottenPassword.vue";
+import NotFound from "../views/error/NotFound.vue";
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: "/forgot-password",
     name: "forgotPassword",
     component: ForgotPassword,
+  },
+  {
+    path: "/:notFound(.*)",
+    name: "notFound",
+    component: NotFound,
   },
 ];
 

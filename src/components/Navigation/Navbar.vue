@@ -104,8 +104,14 @@
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <RouterLink
+          :to="{ name: 'registration' }"
+          class="m-1 text-sm font-semibold leading-6 bg-green-700 hover:bg-green-900 text-white py-1 px-4 rounded"
+        >
+          Register
+        </RouterLink>
+        <RouterLink
           :to="{ name: 'login' }"
-          class="text-sm font-semibold leading-6 text-gray-900"
+          class="m-1 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-200 py-1 px-4 rounded"
         >
           Log in <span aria-hidden="true">&rarr;</span>
         </RouterLink>
@@ -180,10 +186,15 @@
               >
             </div>
             <div class="py-6">
-              <a
-                href="#"
+              <RouterLink
+                :to="{ name: 'registration' }"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Log in</a
+                >Sign Up</RouterLink
+              >
+              <RouterLink
+                :to="{ name: 'login' }"
+                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Log in</RouterLink
               >
             </div>
           </div>
