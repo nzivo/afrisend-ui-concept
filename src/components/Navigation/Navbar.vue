@@ -299,13 +299,13 @@ import store from "../../store/index.js";
 
 export default {
   methods: {
-    login() {
+    // corrected the function on click
+    logout() {
       store.dispatch("logout");
     },
   },
   computed: {
     isAuthenticated() {
-      console.log("navbar isauthenticated " + store.getters.isAuthenticated);
       store.getters.isAuthenticated;
     },
   },

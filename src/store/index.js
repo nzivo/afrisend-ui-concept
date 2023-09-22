@@ -1,5 +1,9 @@
 import { createStore } from "vuex";
 
+import mutations from "./mutations.js";
+import actions from "./actions.js";
+import getters from "./getters.js";
+
 const store = new createStore({
   state: {
     user: {
@@ -8,30 +12,9 @@ const store = new createStore({
     },
     // other state properties
   },
-  mutations: {
-    SET_AUTHENTICATED(state, value) {
-      console.log("Mutation SET_AUTHENTICATED called");
-      state.user.authenticated = value;
-    },
-    // other mutations
-  },
-  actions: {
-    login({ commit }) {
-      // perform login logic here
-      commit("SET_AUTHENTICATED", true);
-    },
-    logout({ commit }) {
-      // Perform the logout logic here, and then commit the mutation to update the state
-      commit("SET_AUTHENTICATED", false);
-    },
-    // other actions
-  },
-  getters: {
-    isAuthenticated(state) {
-      return state.user.authenticated;
-    },
-    // You can define other getters here as needed
-  },
+  mutations: mutations,
+  actions: actions,
+  getters: getters,
   // other modules, if applicable
 });
 
