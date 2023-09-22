@@ -9,7 +9,7 @@
         <div
           class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
           style="
-            background-image: url('https:/raw.githubusercontent.com/nzivo/afrisend-ui-concept/main/public/images/registration.jpg');
+            background-image: url('https://raw.githubusercontent.com/nzivo/afrisend-ui-concept/main/public/images/registration.jpg');
           "
         ></div>
         <!-- Col -->

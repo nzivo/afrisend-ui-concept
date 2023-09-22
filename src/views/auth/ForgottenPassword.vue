@@ -9,7 +9,7 @@
         <div
           class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
           style="
-            background-image: url('https:/raw.githubusercontent.com/nzivo/afrisend-ui-concept/main/public/images/reset-password.jpg');
+            background-image: url('https://raw.githubusercontent.com/nzivo/afrisend-ui-concept/main/public/images/reset-password.jpg');
           "
         ></div>
         <!-- Col -->
