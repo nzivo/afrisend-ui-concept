@@ -6,9 +6,7 @@
       <!-- Col -->
       <div
         class="w-full h-auto bg-gray-400 hidden lg:block lg:w-2/3 bg-cover"
-        style="
-          background-image: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');
-        "
+        style="background-image: url('/images/login.jpg')"
       ></div>
       <!-- Col -->
       <div class="w-full lg:w-1/3 bg-white p-5">

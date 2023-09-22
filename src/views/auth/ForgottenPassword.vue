@@ -7,9 +7,7 @@
         <!-- Col -->
         <div
           class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
-          style="
-            background-image: url('https://source.unsplash.com/oWTW-jNGl9I/600x800');
-          "
+          style="background-image: url('/images/reset-password.jpg')"
         ></div>
         <!-- Col -->
         <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
