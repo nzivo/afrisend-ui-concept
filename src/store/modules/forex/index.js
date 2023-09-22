@@ -5,7 +5,6 @@ import actions from "./actions.js";
 import getters from "./getters.js";
 
 const store = new createStore({
-  modules: {},
   state: {
     user: {
       authenticated: false,
