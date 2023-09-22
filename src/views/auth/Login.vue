@@ -4,9 +4,12 @@
     <!-- Row -->
     <div class="w-full flex">
       <!-- Col -->
+      <!-- Ammended the image URLs -->
       <div
         class="w-full h-auto bg-gray-400 hidden lg:block lg:w-2/3 bg-cover"
-        style="background-image: url('/images/login.jpg')"
+        style="
+          background-image: url('https:/raw.githubusercontent.com/nzivo/afrisend-ui-concept/main/public/images/login.jpg');
+        "
       ></div>
       <!-- Col -->
       <div class="w-full lg:w-1/3 bg-white p-5">

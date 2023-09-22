@@ -5,9 +5,12 @@
       <!-- Row -->
       <div class="w-full xl:w-3/4 lg:w-11/12 flex">
         <!-- Col -->
+        <!-- Ammended the image URLs -->
         <div
           class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-          style="background-image: url('/images/registration.jpg')"
+          style="
+            background-image: url('https:/raw.githubusercontent.com/nzivo/afrisend-ui-concept/main/public/images/registration.jpg');
+          "
         ></div>
         <!-- Col -->
         <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
