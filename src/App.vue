@@ -1,5 +1,14 @@
-<script setup>
+<script>
 import Navbar from "./components/Navigation/Navbar.vue";
+import store from "./store/index.js";
+export default {
+  components: {
+    Navbar,
+  },
+  created() {
+    store.dispatch("tryLogin");
+  },
+};
 </script>
 
 <template>

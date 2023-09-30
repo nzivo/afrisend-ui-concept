@@ -296,12 +296,14 @@ const mobileMenuOpen = ref(false);
 
 <script>
 import store from "../../store/index.js";
+import router from "../../router/index.js";
 
 export default {
   methods: {
     // corrected the function on click
-    logout() {
-      store.dispatch("logout");
+    async logout() {
+      await store.dispatch("logout");
+      router.push({ name: "login" });
     },
   },
   computed: {

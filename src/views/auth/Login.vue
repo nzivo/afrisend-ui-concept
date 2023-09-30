@@ -93,11 +93,13 @@
 
 <script>
 import store from "../../store/index.js";
+import router from "../../router/index.js";
 
 export default {
   methods: {
-    login() {
-      store.dispatch("login");
+    async login() {
+      await store.dispatch("login");
+      router.push({ name: "home" });
     },
   },
   computed: {
